@@ -7,9 +7,11 @@ class Operation
     def reverse_method
         reverse = 0
         while @num >0
-        reverse = reverse*10
-        reverse = reverse + (@num %10)
+
+        rem = @num %10
         @num = @num/10
+        reverse = reverse *10 + rem
+
         end
         return reverse
     end
@@ -41,7 +43,6 @@ class Operation
         else
             puts "number is not palindrom"
         end
-    
     end
 
  def prime_or_not
@@ -75,9 +76,9 @@ class Operation
 end
 
 
-test = Operation.new(922)
-# puts test.reverse_method
-puts test.addition
+test = Operation.new(122)
+puts test.reverse_method
+# puts test.addition
 # puts test.palindrom
 # put test.addition
 # puts test.prime_or_not

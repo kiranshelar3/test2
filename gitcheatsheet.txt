@@ -1,0 +1,60 @@
+touch .gitignore
+git config --global user.name your name
+git config --global user.email youremail@example.com
+git init
+git add .
+git commit -m "Initial Commit"
+git status # Just to see
+ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
+tail <path to id_rsa.pub> # Add this key to your GitHub account
+git remote add orign <ssh url.git>
+git push origin master
+git push -u origin main
+
+*************************************************************************************************************
+
+git commands 
+
+1. git init:- to create new local repository or we can create repository with project name (git init projectname)
+
+2. git clone repository-url :- cloning repository from github
+
+3. git add filename :- used to add file in staging area
+   git add* :- to add all files of local repo
+   git add folder1/file1/file/2
+
+4. git commit -m "message" :- it will create snapshot of changes and save it to directory
+
+5. git status :- displays the list of changed files that are yet to be staged or commited.
+
+6. git stash :- save changes
+
+6. git push origin <master> :- used to send local commits to the master branch of remote repository 
+				(replace master with branch where we want to push changes) 	
+
+7. git pull origin <master> :-used to pull data from master branch repository
+
+8. git remmote :- it lets you view all remote repositories also used to connect our local repository to remote server
+   git remote -v :- list all connections along with their urls
+   git remote add origin RepoUrl :- connect the local repository to remote server.
+   git remote rm <name-of-the-repository> :- to delete a connection to a specified remote repository.
+
+9. git branch branch-name:- let's assume We are working in our local repository, and we do not want to disturb or possibly wreck the main project.
+			So we create a new branch
+10. git branch:- checking branch We can see the new branch with the name "branch_name", but the * master specifies that we are currently on that branch.
+
+11. git checkout hello-world-images
+	Switched to branch 'hello-world-images':- checkout is the command used to check out a branch. Moving us from the current branch, to the 
+						one specified at the end of the command
+
+12. git add --all:- Using --all instead of individual filenames will Stage all changed (new, modified, and deleted) files.
+
+13. git checkout master
+	Switched to branch 'master' :- switching to branch master
+
+14. git checkout -b emergency-fix
+	Switched to a new branch 'emergency-fix':- in case we are not yet done with hello-world-images, but we need to fix an error on master.
+						I don't want to mess with master directly, and I do not want to mess with hello-world-images, 
+						since it is not done yet. So we create a new branch to deal with the emergency:
+15. 
+*************************************************************************************************************
